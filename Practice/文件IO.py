@@ -7,23 +7,23 @@ __author__ = 'lenovo'
 # 路径支持绝对和相对路径
 # 模式：r:读；r+:读写 w:写（覆盖/新建） w+:读写（覆盖/新建） a:追加（没有的时候新建）
 # 打开文件open，两个常用参数：文件路径和打开模式
-# f = open('F:\Code\VIPtest2\data.txt','r')
+f = open('F:\Code\VIPtest2\data.txt','r')
 
-# # 读取文件全部内容，或者读取指定长度字节的数据
-# print(f.read())
-# print(f.read(4))
-# # 读取整行
-# # print(f.readline())
-# for i in range(5):
-#     print(f.readline())
+# 读取文件全部内容，或者读取指定长度字节的数据
+print(f.read())
+print(f.read(4))
+# 读取整行
+print(f.readline())
+for i in range(5):
+    print(f.readline())
 # 读取所有行
-# print(f.readlines())
+print(f.readlines())
 
-# # ---------写入------
-# f = open('F:\Code\VIPtest2\data2.txt','r+')
-# f.write('hello python!\n')
-# f.write('welcome~')
-# f.close()
+# ---------写入------
+f = open('F:\Code\VIPtest2\data2.txt','r+')
+f.write('hello python!\n')
+f.write('welcome~')
+f.close()
 
 # 作业：只取出data中的数字并写入另外的文件
 # 1.读取文件中的所有数据 -- readlines
@@ -50,9 +50,10 @@ for l in lines:
             if lists[j] > lists[j+1]:
                 lists[j],lists[j+1] = lists[j+1],lists[j]
 print(lists)
+f.close()
 f1 = open('F:\Code\VIPtest2\data3.txt','r+')
 f1.write(str(lists))
-f.close()
+f1.close()
 
 # 冒泡排序
 # for i in range(1,len(lists)):

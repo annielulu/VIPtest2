@@ -17,6 +17,7 @@ class B(Base):
 class C(A,B):
     pass
 
+# 方法的查找顺序是按照继承的最近来，先查找自身，再查找A,再查找B,再查找Base
 c = C()
 c.test()
 c.test1()
