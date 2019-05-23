@@ -19,7 +19,8 @@ class HouseItem():
 class House():
     def __init__(self, house_type, area):
         self.house_type = house_type
-        self.area = area # 剩余面积
+        self.area = area
+        # 剩余面积
         self.free_area = area
         self.item_list = []
     def __str__(self):
