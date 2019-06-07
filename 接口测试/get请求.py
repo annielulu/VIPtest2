@@ -5,7 +5,7 @@ __author__ = 'lenovo'
 import requests
 # 第二步：发送get请求
 urlstr = 'https://www.wanandroid.com/blog/show/2'
-r = requests.get(url=urlstr)   # r = response
+r = requests.get(url=urlstr,timeout=5)   # r = response ,timeout超时时间
 # 第三步：获取结果
 print(r.text)
 
